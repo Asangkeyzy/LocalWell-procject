@@ -52,7 +52,7 @@ export default function OrderSummarySidebar(props: OrderSummarySidebarProps) {
         <div className="mt-3 flex items-start gap-3">
           <div className="h-14 w-14 overflow-hidden rounded-lg border bg-zinc-50">
             {items[0]?.imageUrl ? (
-              // If you have local item images, move them to /public and use "/img.png"
+             
               <img src={items[0].imageUrl} alt={items[0].name} className="h-full w-full object-contain" />
             ) : (
               <div className="grid h-full w-full place-items-center text-xs text-zinc-500">IMG</div>
@@ -95,7 +95,7 @@ export default function OrderSummarySidebar(props: OrderSummarySidebarProps) {
       openUp ? "max-h-[520px] opacity-100" : "max-h-0 opacity-0",
     ].join(" ")}
   >
-    {/* inner padding goes here so it doesn't affect max-h when closed */}
+   
     <div className="pb-4">
       <div className="mt-4">
         <SavingsBanner text={savedText} />
@@ -119,7 +119,6 @@ export default function OrderSummarySidebar(props: OrderSummarySidebarProps) {
     </div>
   </div>
 
-  {/* Buttons (stays at bottom) */}
   <div className="flex gap-3">
     <button
       onClick={() => setOpenUp((v) => !v)}
@@ -160,17 +159,17 @@ function Row({ label, value, tone = "normal" }: { label: string; value: string; 
 function SavingsBanner({ text }: { text: string }) {
     return (
       <div className="relative overflow-hidden rounded-xl">
-        {/* Background image */}
+      
         <img
           src={discountBg}
           alt=""
           className="absolute inset-0 h-full w-full object-cover"
         />
   
-        {/* Dark overlay if needed for readability */}
+       
         <div className="absolute inset-0 bg-black/10" />
   
-        {/* Text on top */}
+       
         <div className="relative z-10 px-4 py-3 text-sm font-semibold text-white">
           {text}
         </div>
