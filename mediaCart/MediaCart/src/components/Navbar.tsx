@@ -38,14 +38,8 @@ export default function Navbar() {
          
           <NavLink
             to="/login"
-            className={({ isActive }) =>
-              [
-                "inline-flex h-10 items-center text-lg font-semibold pl-6",
-                isActive
-                  ? " bg-zinc-900 text-black hover:bg-blue-800"
-                  : "bg-white text-zinc-900 hover:bg-zinc-50",
-              ].join(" ")
-            }
+           
+             
           >
              <img src={LoginIcon} className="w-6" />
               <span className="hidden sm:inline text-black">Login</span>
@@ -53,12 +47,7 @@ export default function Navbar() {
 
           <NavLink
             to="/cart"
-            className={({ isActive }) =>
-              [
-                "inline-flex h-10 items-center gap-2  px-3 text-lg font-semibold",
-                isActive ? " text-white" : " hover:bg-zinc-50",
-              ].join(" ")
-            }
+           
             aria-label="Cart"
           >
             
@@ -69,12 +58,7 @@ export default function Navbar() {
          
           <NavLink
             to="/seller"
-            className={({ isActive }) =>
-              [
-                "hidden md:inline-flex h-10 items-center  px-2 text-lg font-semibold",
-                isActive ? " text-white" : " hover:bg-zinc-50",
-              ].join(" ")
-            }
+           
           >
              <img src={PlusIcon} className="w-8 " />
             <span className="hidden sm:inline px-2 text-black"> Become a Seller</span>
